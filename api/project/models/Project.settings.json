@@ -1,0 +1,63 @@
+{
+  "connection": "default",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "type": "string"
+    },
+    "slug": {
+      "unique": true,
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "role": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "tokens": {
+      "type": "json"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "tokens_dark": {
+      "type": "json"
+    },
+    "credit": {
+      "type": "text"
+    },
+    "illustration": {
+      "type": "string"
+    },
+    "illustrationViewbox": {
+      "default": "0 0 327 86",
+      "type": "string"
+    },
+    "status": {
+      "required": true,
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "type": "enumeration"
+    }
+  }
+}

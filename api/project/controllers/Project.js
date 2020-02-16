@@ -17,13 +17,13 @@ module.exports = {
     };
 
     if (ctx.query._q) {
-      entities = await strapi.services.article.search(ctx.query);
+      entities = await strapi.services.project.search(ctx.query);
     } else {
-      entities = await strapi.services.article.find(ctx.query);
+      entities = await strapi.services.project.find(ctx.query);
     }
 
     return entities.map(entity =>
-      sanitizeEntity(entity, { model: strapi.models.article })
+      sanitizeEntity(entity, { model: strapi.models.project })
     );
   },
 };

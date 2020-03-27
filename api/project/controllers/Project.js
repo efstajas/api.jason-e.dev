@@ -13,7 +13,7 @@ module.exports = {
 
     ctx.query = {
       ...ctx.query,
-      status: 'published'
+      status: ctx.query.status || 'published',
     };
 
     if (ctx.query._q) {
